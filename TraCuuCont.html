@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tra Cứu Cont</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 12pt;
+      color: #000;
+      background: #fff;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      padding: 15mm 15mm 15mm 20mm;
+      background: #fff;
+      position: relative;
+    }
+
+    /* ===== HEADER ===== */
+    .header-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 6px;
+    }
+
+    .header-left {
+      text-align: center;
+      width: 48%;
+    }
+
+    .header-right {
+      text-align: right;
+      width: 48%;
+      font-size: 11pt;
+    }
+
+    .header-left .ministry {
+      font-size: 10pt;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .header-left .department {
+      font-size: 11pt;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .header-left .sub-department {
+      font-size: 10pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-bottom: 2px solid #000;
+      display: inline-block;
+      padding-bottom: 2px;
+    }
+
+    /* ===== TITLE ===== */
+    .doc-title {
+      text-align: center;
+      margin: 14px 0 6px 0;
+    }
+
+    .doc-title h2 {
+      font-size: 15pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .doc-title .subtitle {
+      font-size: 11pt;
+    }
+
+    .doc-date {
+      text-align: center;
+      font-style: italic;
+      font-size: 11pt;
+      margin-bottom: 14px;
+    }
+
+    /* ===== TABLE ===== */
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+      font-size: 11pt;
+    }
+
+    .info-table th,
+    .info-table td {
+      border: 1px solid #555;
+      padding: 4px 8px;
+      vertical-align: middle;
+    }
+
+    .info-table th {
+      background-color: #d9e1f2;
+      font-weight: bold;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .info-table td.label {
+      background-color: #f2f2f2;
+      font-weight: bold;
+      white-space: nowrap;
+      width: 36%;
+    }
+
+    .info-table td.value {
+      width: 64%;
+    }
+
+    /* ===== SECTION HEADING ===== */
+    .section-title {
+      font-weight: bold;
+      font-size: 12pt;
+      text-transform: uppercase;
+      background-color: #bdd7ee;
+      padding: 4px 8px;
+      margin: 12px 0 0 0;
+      border: 1px solid #555;
+    }
+
+    /* ===== GOODS TABLE ===== */
+    .goods-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11pt;
+      margin-bottom: 10px;
+    }
+
+    .goods-table th {
+      background-color: #d9e1f2;
+      font-weight: bold;
+      border: 1px solid #555;
+      padding: 4px 8px;
+      text-align: center;
+    }
+
+    .goods-table td {
+      border: 1px solid #555;
+      padding: 4px 8px;
+      vertical-align: middle;
+    }
+
+    .goods-table td.label {
+      background-color: #f2f2f2;
+      font-weight: bold;
+      white-space: nowrap;
+      width: 36%;
+    }
+
+    /* ===== LUONG COLOR ===== */
+    .luong-green  { color: #00aa00; font-weight: bold; }
+    .luong-yellow { color: #cc8800; font-weight: bold; }
+    .luong-red    { color: #cc0000; font-weight: bold; }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      margin-top: 18px;
+      font-size: 10pt;
+      color: #444;
+      border-top: 1px dashed #999;
+      padding-top: 6px;
+    }
+
+    .footer .page-info {
+      float: right;
+      font-style: italic;
+    }
+
+    .page-number {
+      position: absolute;
+      top: 10mm;
+      right: 15mm;
+      font-size: 10pt;
+      font-style: italic;
+      color: #444;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { margin: 0; padding: 15mm 15mm 15mm 20mm; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Page number top-right -->
+  <div class="page-number">Page 1 of 1</div>
+
+  <!-- HEADER -->
+  <div class="header-block">
+    <div class="header-left">
+      <div class="ministry">BỘ TÀI CHÍNH</div>
+      <div class="department" id="TenCucHaiQuan">CỤC HẢI QUAN TP. HỒ CHÍ MINH</div>
+      <div class="sub-department" id="lbl_TenChiCucHaiQuan">CHI CỤC HẢI QUAN CỬA KHẨU CẢNG SÀI GÒN KV1</div>
+    </div>
+    <div class="header-right">
+      <div id="lbl_NgayThangNam">Ngày 22 tháng 04 năm 2026</div>
+    </div>
+  </div>
+
+  <!-- TITLE -->
+  <div class="doc-title">
+    <h2>PHIẾU TRA CỨU THÔNG TIN CONT</h2>
+    <div class="subtitle">DANH SÁCH HÀNG HÓA NHẬP KHẨU</div>
+  </div>
+
+  <!-- MAIN INFO TABLE -->
+  <table class="info-table">
+    <tr>
+      <td class="label">Chi cục hải quan giám sát</td>
+      <td class="value" id="lbl_ChiCucHaiQuanGiamSat">CẢNG SÀI GÒN KV1</td>
+    </tr>
+    <tr>
+      <td class="label">Đơn vị XNK</td>
+      <td class="value" id="lbl_TenDonViXNK">CÔNG TY TNHH ABC</td>
+    </tr>
+    <tr>
+      <td class="label">Mã số thuế</td>
+      <td class="value" id="lbl_MaSoThue">0123456789</td>
+    </tr>
+    <tr>
+      <td class="label">Ngày tờ khai</td>
+      <td class="value" id="lbl_NgayToKhai">01/01/2026 - 31/12/2026</td>
+    </tr>
+    <tr>
+      <td class="label">Số tờ khai</td>
+      <td class="value" id="lbl_SoToKhai">123456789</td>
+    </tr>
+    <tr>
+      <td class="label">Loại hình</td>
+      <td class="value" id="lbl_TenLoaiHinh">A12 - Nhập kinh doanh thông thường</td>
+    </tr>
+    <tr>
+      <td class="label">Trạng thái tờ khai</td>
+      <td class="value" id="lbl_TrangThaiToKhai">Thông quan</td>
+    </tr>
+    <tr>
+      <td class="label">Luồng</td>
+      <td class="value"><span id="lbl_Luong" class="luong-green">Xanh</span></td>
+    </tr>
+  </table>
+
+  <!-- GOODS SECTION -->
+  <div class="section-title">THÔNG TIN HÀNG HÓA</div>
+  <table class="goods-table">
+    <tr>
+      <td class="label">Số quản lý hàng hóa</td>
+      <td id="lbl_SoQuanLyHangHoa">CONT-2026-001</td>
+    </tr>
+    <tr>
+      <td class="label">Số kiện</td>
+      <td id="lbl_SoKien">100 PACKAGE</td>
+    </tr>
+    <tr>
+      <td class="label">Tổng trọng lượng hàng</td>
+      <td id="lbl_TongTrongLuong">5000 Kilogam</td>
+    </tr>
+  </table>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span class="page-info">Page 1 of 1</span>
+    <span id="lbl_KetXuat">Kết xuất dữ liệu lúc: 22/04/2026 10:00:00</span>
+  </div>
+
+</div>
+</body>
+</html>
